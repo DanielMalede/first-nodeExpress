@@ -11,6 +11,9 @@ app.get('/Daniel',(req,res)=>{
     res.send("Hello Daniel")
 })
 
+app.get('/:id',(req,res)=>{
+    res.send(`the id is:${req.params.id}`)
+})
 
 app.listen(port, () => {
   log(`this is the server ${port}`);

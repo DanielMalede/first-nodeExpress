@@ -1,10 +1,12 @@
 const { log } = require("console");
 const express = require("express");
+const cors = require('cors')
 const app = express();
 const port = 6060;
 
 app.use(express.json({extended:true}))
 app.use(express.urlencoded({extended:true}))
+app.use(cors())
 app.post('/',(req,res)=>{
     const data = req.body
     res.send(data)

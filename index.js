@@ -9,6 +9,7 @@ app.post('/',(req,res)=>{
     const data = req.body
     res.send(data)
 })
+
 app.get('/',(req,res)=>{
     res.send("Hello World")
 })
